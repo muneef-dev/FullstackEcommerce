@@ -5,7 +5,7 @@ import {
   deleteProduct,
   updateProduct,
   createProduct,
-} from "./productController";
+} from "../product/controller";
 // in router will add validation and middlewares
 // router just connect things 
 // product endpoints
