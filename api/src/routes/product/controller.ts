@@ -36,6 +36,7 @@ export async function createProduct(req: Request, res: Response) {
   try {
     // console.log(req.cleanBody);
     // const data = _.pick(req.body, Object.keys(createProductSchema.shape)); // move to the validation
+    console.log(req.userId);
     const [product] = await db
       .insert(productTable)
       .values(req.cleanBody)

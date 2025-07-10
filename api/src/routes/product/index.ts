@@ -8,6 +8,7 @@ import {
 } from "../product/controller";
 // import { z } from "zod";
 import { validateData } from "../../middleware/validation";
+import { verifyToken, verifySeller } from "../../middleware/auth";
 // import { createInsertSchema } from "drizzle-zod";
 import { createProductSchema, updateProductSchema, productTable } from "../../db/productSchema";
 
@@ -27,9 +28,9 @@ const router = Router();
 router.get("/", getProducts);
 router.get("/:id", getProductById);
 // @ts-ignore
-router.post("/", validateData(createProductSchema) , createProduct);
+router.post("/", verifyToken, verifySeller, validateData(createProductSchema) , createProduct);
 // @ts-ignore
-router.put("/:id", validateData(updateProductSchema), updateProduct);
-router.delete("/:id", deleteProduct);
+router.put("/:id", verifyToken, verifySeller,validateData(updateProductSchema), updateProduct);
+router.delete("/:id", verifyToken, verifySeller, deleteProduct);
 
 export default router;
