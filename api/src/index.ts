@@ -2,6 +2,7 @@ import dotenv from 'dotenv';
 // import express, { Router } from 'express';
 import express, { json, urlencoded } from 'express';
 import productRoutes from './routes/product/index';
+import orderRoutes from './routes/order/index'
 import authRoutes from './routes/auth/index';
 
 dotenv.config();
@@ -19,6 +20,7 @@ app.get('/', (req, res) => {
 
 app.use('/product', productRoutes);
 app.use('/auth', authRoutes)
+app.use('/order', orderRoutes);
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
