@@ -41,4 +41,8 @@ export const createOrderWithOrderItemSchema = z.object({
   order: createOrderSchema,
   // @ts-ignore
   items: z.array(createOrderItemSchema)
-})
+});
+
+export const updateOrderSchema = createInsertSchema(orderTable).pick({
+  status: true
+});
