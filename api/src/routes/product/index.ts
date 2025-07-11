@@ -5,12 +5,12 @@ import {
   deleteProduct,
   updateProduct,
   createProduct,
-} from "../product/controller";
+} from "../product/controller.js";
 // import { z } from "zod";
-import { validateData } from "../../middleware/validation";
-import { verifyToken, verifySeller } from "../../middleware/auth";
+import { validateData } from "../../middleware/validation.js";
+import { verifyToken, verifySeller } from "../../middleware/auth.js";
 // import { createInsertSchema } from "drizzle-zod";
-import { createProductSchema, updateProductSchema, productTable } from "../../db/productSchema";
+import { createProductSchema, updateProductSchema, productTable } from "../../db/productSchema.js";
 
 // in router will add validation and middlewares
 // router just connect things 

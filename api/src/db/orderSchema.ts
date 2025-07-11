@@ -6,8 +6,8 @@ import {
   varchar,
 } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
-import { userTable } from "./userSchema";
-import { productTable } from "./productSchema";
+import { userTable } from "./userSchema.js";
+import { productTable } from "./productSchema.js";
 import {z} from 'zod';
 
 

@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { db } from "../../db/index";
-import { orderItemTable, orderTable } from "../../db/orderSchema";
+import { db } from "../../db/index.js";
+import { orderItemTable, orderTable } from "../../db/orderSchema.js";
 import { eq } from "drizzle-orm";
 
 // if req.role is admin, return all orders

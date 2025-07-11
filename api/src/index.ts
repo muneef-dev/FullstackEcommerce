@@ -1,9 +1,9 @@
 import dotenv from 'dotenv';
 // import express, { Router } from 'express';
 import express, { json, urlencoded } from 'express';
-import productRoutes from './routes/product/index';
-import orderRoutes from './routes/order/index'
-import authRoutes from './routes/auth/index';
+import productRoutes from './routes/product/index.js';
+import orderRoutes from './routes/order/index.js'
+import authRoutes from './routes/auth/index.js';
 
 dotenv.config();
 

@@ -1,6 +1,6 @@
 import { Request, Response } from "express"; // node also has Request and Response but dont use that.
-import { db } from "../../db/index";
-import { createProductSchema, productTable } from "../../db/productSchema";
+import { db } from "../../db/index.js";
+import { createProductSchema, productTable } from "../../db/productSchema.js";
 import { eq } from "drizzle-orm";
 import _ from 'lodash';
 
