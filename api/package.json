@@ -21,7 +21,7 @@
     "express": "^5.1.0",
     "lodash": "^4.17.21",
     "pg": "^8.16.3",
-    "zod": "^3.25.75"
+    "zod": "^4.0.5"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",

@@ -21,10 +21,10 @@ export async function createOrder(req: Request, res: Response) {
     const [newOrder] = await db.insert(orderTable).values({userId: userId}).returning();
     // todo: validate products ids, and take their actual price from db
     const orderItems = items.map((item: any) => ({
-      ...items,
+      ...item,
       orderId: newOrder.id
     }));
-    const [newOrderItem] = await db.insert(orderItemTable).values(orderItems).returning();
+    const newOrderItem = await db.insert(orderItemTable).values(orderItems).returning();
     res.status(201).json({ ...newOrder, items: newOrderItem });
   } catch (e) {
     res.status(400).json({ message: "Invalid order data" });

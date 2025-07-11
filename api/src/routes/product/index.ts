@@ -27,9 +27,7 @@ const router = Router();
 
 router.get("/", getProducts);
 router.get("/:id", getProductById);
-// @ts-ignore
 router.post("/", verifyToken, verifySeller, validateData(createProductSchema) , createProduct);
-// @ts-ignore
 router.put("/:id", verifyToken, verifySeller,validateData(updateProductSchema), updateProduct);
 router.delete("/:id", verifyToken, verifySeller, deleteProduct);
 

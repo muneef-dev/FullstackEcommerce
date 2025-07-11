@@ -8,7 +8,6 @@ const router = Router();
 
 router.get('/', getOrders);
 router.get('/:id', getOrderById);
-// @ts-ignore
 router.post('/', verifyToken, validateData(createOrderWithOrderItemSchema), createOrder);
 router.put('/:id', createOrder);
 router.delete('/:id', createOrder);

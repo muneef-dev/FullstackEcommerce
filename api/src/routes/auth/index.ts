@@ -8,7 +8,6 @@ import jwt from "jsonwebtoken";
 import { bytes } from "drizzle-orm/gel-core";
 
 const router = Router();
-// @ts-ignore
 router.post("/register", validateData(createUserSchema), async (req, res) => {
   try {
     const data = req.cleanBody;
@@ -22,7 +21,6 @@ router.post("/register", validateData(createUserSchema), async (req, res) => {
   }
 });
 
-// @ts-ignore
 router.post("/login", validateData(loginSchema), async (req, res) => {
   try {
     const { email, password } = req.cleanBody;
